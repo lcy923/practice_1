@@ -24,3 +24,9 @@
 : commit 이 완료된 시점은 변경 내용이 로컬 저장소에 HEAD안에 머물고 있음을 의미, 우리는 변경 내역을 동료들도 확인할 수 있도록 remote 서버에 반영할 필요가 있음.
 -git pull // git pull <remote> <branch>
 : 서버의 가장 최근의 변경 내역을 컴퓨터로 가져오는 행위.
+-git checkout -b develop : develop이라는 branch 새로 만들기
+-git checkout -b develop origin/stage : stage 라는 특정 branch로부터 새로운 branch 만들기
+-git checkout master : master branch로 돌아오기
+-git push -u origin develop 
+-git branch --set-upstream-to=origin/develop develop
+-git pull : branch 를 여러명과 협업하고 있는 도중 push시에 remote 서버의 최신 내용을 로컬에 반영하지 않았다면 remote 서버와 연결 후 git pull 을 통해 merge
